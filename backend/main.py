@@ -1,5 +1,5 @@
 """
-SPVM3 Player - FastAPI Backend
+Aura Player - FastAPI Backend
 Auto-discovers and serves audio tracks from the local songs directory.
 Extracts ID3, MP4, FLAC metadata, durations, and embedded album covers.
 Provides playlist management, favorites tracking, and audio streaming with HTTP 206 range seeking support.
@@ -24,7 +24,7 @@ try:
 except ImportError:
     MUTAGEN_AVAILABLE = False
 
-app = FastAPI(title="SPVM3 Player API", version="2.0.0")
+app = FastAPI(title="Aura Player API", version="2.0.0")
 
 app.add_middleware(
     CORSMiddleware,
@@ -465,7 +465,7 @@ def toggle_favorite(track_id: int):
 def root():
     return {
         "status": "ok",
-        "service": "spvm3-player-api",
+        "service": "aura-player-api",
         "version": "2.0.0",
         "total_tracks": len(TRACKS),
         "total_playlists": len(PLAYLISTS)

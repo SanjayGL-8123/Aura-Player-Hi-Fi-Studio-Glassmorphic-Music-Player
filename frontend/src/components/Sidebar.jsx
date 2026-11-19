@@ -19,11 +19,11 @@ export default function Sidebar({
           setActiveView('library')
           setActivePlaylistId(null)
         }}
-        title="SPVM3 Player Home"
+        title="Aura Player Home"
       >
         <div className="brand-icon">🎧</div>
         <div>
-          <div className="brand-title">SPVM3 Player</div>
+          <div className="brand-title">Aura Player</div>
           <div className="brand-tag">Hi-Fi Studio</div>
         </div>
       </div>

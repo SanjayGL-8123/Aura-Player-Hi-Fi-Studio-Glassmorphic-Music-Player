@@ -1,4 +1,4 @@
-# SPVM3 Player — Hi-Fi Studio & Glassmorphic Music Player
+# Aura Player — Hi-Fi Studio & Glassmorphic Music Player
 
 Full-stack modern music player with automatic local audio library discovery, multi-format ID3/MP4 metadata extraction, embedded album art rendering, playlist management, and high-fidelity audio streaming with HTTP 206 range seeking support.
 

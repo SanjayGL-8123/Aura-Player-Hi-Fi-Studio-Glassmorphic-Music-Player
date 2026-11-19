@@ -33,17 +33,17 @@ export default function App() {
   const [progress, setProgress] = useState(0)
   const [duration, setDuration] = useState(0)
   const [volume, setVolume] = useState(() => {
-    const saved = localStorage.getItem('spvm3_volume')
+    const saved = localStorage.getItem('aura_volume')
     return saved !== null ? Number(saved) : 0.8
   })
   const [isMuted, setIsMuted] = useState(() => {
-    return localStorage.getItem('spvm3_muted') === 'true'
+    return localStorage.getItem('aura_muted') === 'true'
   })
   const [shuffle, setShuffle] = useState(() => {
-    return localStorage.getItem('spvm3_shuffle') === 'true'
+    return localStorage.getItem('aura_shuffle') === 'true'
   })
   const [repeatMode, setRepeatMode] = useState(() => {
-    return localStorage.getItem('spvm3_repeat') || 'off' // 'off' | 'all' | 'one'
+    return localStorage.getItem('aura_repeat') || 'off' // 'off' | 'all' | 'one'
   })
 
   // Queue & Extras
@@ -61,19 +61,19 @@ export default function App() {
 
   // Save Settings to LocalStorage
   useEffect(() => {
-    localStorage.setItem('spvm3_volume', volume)
+    localStorage.setItem('aura_volume', volume)
   }, [volume])
 
   useEffect(() => {
-    localStorage.setItem('spvm3_muted', isMuted)
+    localStorage.setItem('aura_muted', isMuted)
   }, [isMuted])
 
   useEffect(() => {
-    localStorage.setItem('spvm3_shuffle', shuffle)
+    localStorage.setItem('aura_shuffle', shuffle)
   }, [shuffle])
 
   useEffect(() => {
-    localStorage.setItem('spvm3_repeat', repeatMode)
+    localStorage.setItem('aura_repeat', repeatMode)
   }, [repeatMode])
 
   const triggerToast = (msg) => {
